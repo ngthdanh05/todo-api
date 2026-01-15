@@ -23,7 +23,7 @@
     "@types/jsonwebtoken": "^9.0.10",
     "@types/mongoose": "^5.11.96",
     "@types/morgan": "^1.9.10",
-    "@types/node": "^24.0.10",
+    "@types/node": "^20.11.30",
     "@types/nodemailer": "^6.4.17",
     "@types/nodemon": "^1.19.6",
     "ts-node-dev": "^2.0.0",
