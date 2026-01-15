@@ -1,9 +1,9 @@
 import express from "express";
-import { createTodo } from "controllers/todo/createTodo";
-import { getAllTodos } from "controllers/todo/getAllTodos";
-import { getTodoById } from "controllers/todo/getTodoById";
-import { updateTodo } from "controllers/todo/updateTodo";
-import { deleteTodo } from "controllers/todo/deleteTodo";
+import { createTodo } from "../controllers/todo/createTodo";
+import { getAllTodos } from "../controllers/todo/getAllTodos";
+import { getTodoById } from "../controllers/todo/getTodoById";
+import { updateTodo } from "../controllers/todo/updateTodo";
+import { deleteTodo } from "../controllers/todo/deleteTodo";
 
 const router = express.Router();
 

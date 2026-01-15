@@ -1,16 +1,16 @@
 import express from "express";
 
-import { signup } from "controllers/auth/signup";
-import { signin } from "controllers/auth/signin";
-import { sendVerificationCode } from "controllers/auth/sendVerificationCode";
-import { verifyVerificationCode } from "controllers/auth/verifyVerificationCode";
-import { changePassword } from "controllers/auth/changePassword";
-import { identifier } from "middlewares/identifier";
-import { signout } from "controllers/auth/signout";
-import { sendForgotPasswordCode } from "controllers/auth/sendForgotPasswordCode";
-import { validate } from "controllers/auth/validate";
-import { CheckForgotPasswordCode } from "controllers/auth/checkForgotPasswordCode";
-import { resetPasswordWithCode } from "controllers/auth/resetPasswordWithCode";
+import { sendVerificationCode } from "../controllers/auth/sendVerificationCode";
+import { verifyVerificationCode } from "../controllers/auth/verifyVerificationCode";
+import { changePassword } from "../controllers/auth/changePassword";
+import { identifier } from "../middlewares/identifier";
+import { signout } from "../controllers/auth/signout";
+import { sendForgotPasswordCode } from "../controllers/auth/sendForgotPasswordCode";
+import { validate } from "../controllers/auth/validate";
+import { CheckForgotPasswordCode } from "../controllers/auth/checkForgotPasswordCode";
+import { resetPasswordWithCode } from "../controllers/auth/resetPasswordWithCode";
+import { signup } from "../controllers/auth/signup";
+import { signin } from "../controllers/auth/signin";
 const router = express.Router();
 
 router.get("/validate", identifier, (req, res, next) => {

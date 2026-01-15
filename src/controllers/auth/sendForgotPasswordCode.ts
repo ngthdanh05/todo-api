@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from "express";
-import { AppError } from "middlewares/errorHandler";
-import transport from "middlewares/sendEmail";
-import User from "models/userModel";
-import { hmacProcess } from "utils/hashing";
+import { AppError } from "../../middlewares/errorHandler";
+import transport from "../../middlewares/sendEmail";
+import User from "../../models/userModel";
+import { hmacProcess } from "../../utils/hashing";
 
 // Gửi mã để đặt lại mật khẩu
 export const sendForgotPasswordCode = async (

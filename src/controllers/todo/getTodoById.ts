@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
-import { AppError } from "middlewares/errorHandler";
-import Todo from "models/todoModel";
+import { AppError } from "../../middlewares/errorHandler";
+import Todo from "../../models/todoModel";
 import mongoose from "mongoose";
 
 export const getTodoById = async (

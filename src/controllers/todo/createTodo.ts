@@ -1,6 +1,6 @@
 import { NextFunction, Request, RequestHandler, Response } from "express";
-import { AppError } from "middlewares/errorHandler";
-import Todo from "models/todoModel";
+import { AppError } from "../../middlewares/errorHandler";
+import Todo from "../../models/todoModel";
 
 export const createTodo = async (
   req: Request,

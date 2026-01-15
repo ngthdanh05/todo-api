@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from "express";
-import { AppError } from "middlewares/errorHandler";
-import { acceptCodeSchema } from "middlewares/validator";
-import User from "models/userModel";
-import { hmacProcess } from "utils/hashing";
+import { AppError } from "../../middlewares/errorHandler";
+import { acceptCodeSchema } from "../../middlewares/validator";
+import User from "../../models/userModel";
+import { hmacProcess } from "../../utils/hashing";
 
 export const verifyVerificationCode = async (
   req: Request,

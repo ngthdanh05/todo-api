@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 import User from "../../models/userModel";
-import { AppError } from "middlewares/errorHandler";
+import { AppError } from "../../middlewares/errorHandler";
 
 interface JwtPayload {
   userId: string;

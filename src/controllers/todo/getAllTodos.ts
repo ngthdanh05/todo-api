@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import Todo from "models/todoModel";
+import Todo from "../../models/todoModel";
 
 export const getAllTodos = async (
   req: Request,

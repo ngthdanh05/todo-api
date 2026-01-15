@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from "express";
-import { AppError } from "middlewares/errorHandler";
-import { acceptFPCodeSchema } from "middlewares/validator";
-import User from "models/userModel";
-import { doHash, hmacProcess } from "utils/hashing";
+import { AppError } from "../../middlewares/errorHandler";
+import { acceptFPCodeSchema } from "../../middlewares/validator";
+import User from "../../models/userModel";
+import { doHash, hmacProcess } from "../../utils/hashing";
 
 export const resetPasswordWithCode = async (
   req: Request,

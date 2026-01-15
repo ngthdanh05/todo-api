@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from "express";
-import { AppError } from "middlewares/errorHandler";
-import { signupSchema } from "middlewares/validator";
-import User from "models/userModel";
-import { doHash } from "utils/hashing";
+import { AppError } from "../../middlewares/errorHandler";
+import { signupSchema } from "../../middlewares/validator";
+import User from "../../models/userModel";
+import { doHash } from "../../utils/hashing";
 
 export const signup = async (
   req: Request,

@@ -1,9 +1,9 @@
 import { NextFunction, Request, Response } from "express";
 import jwt from "jsonwebtoken";
-import { AppError } from "middlewares/errorHandler";
-import { signinSchema } from "middlewares/validator";
-import User from "models/userModel";
-import { doHashValidation } from "utils/hashing";
+import { AppError } from "../../middlewares/errorHandler";
+import { signinSchema } from "../../middlewares/validator";
+import User from "../../models/userModel";
+import { doHashValidation } from "../../utils/hashing";
 
 interface jwtPayLoad {
   userId: string;
