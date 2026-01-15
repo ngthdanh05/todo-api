@@ -15,6 +15,7 @@ export const validate = async (
   next: NextFunction
 ) => {
   try {
+    // Lấy token từ cookie tên "Authorization "
     const token = req.cookies["Authorization"];
     if (!token || !token.startsWith("Bearer ")) {
       return next(
@@ -22,9 +23,10 @@ export const validate = async (
       );
     }
 
+    // Xác thực token bằng JWT
     const secret = process.env.TOKEN_SECRET;
     const decoded = jwt.verify(
-      token.replace("Bearer ", ""),
+      token.replace("Bearer ", ""), // Bỏ prefix(tiền tố) "Bearer " trước khi verify
       secret!
     ) as JwtPayload;
 

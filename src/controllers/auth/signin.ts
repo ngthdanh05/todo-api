@@ -1,5 +1,4 @@
 import { NextFunction, Request, Response } from "express";
-import { boolean } from "joi";
 import jwt from "jsonwebtoken";
 import { AppError } from "middlewares/errorHandler";
 import { signinSchema } from "middlewares/validator";
@@ -24,6 +23,8 @@ export const signin = async (
     const { email, password } = req.body;
     // Tìm người dùng trong cơ sở dữ liệu
     const existingUser = await User.findOne({ email }).select("+password");
+    // Vì field password thường bị select: false trong schema, nên phải thêm select("+password") để lấy ra
+
     if (!existingUser) return next(new AppError("User does not exists!"));
 
     const isValid = await doHashValidation(password, existingUser.password);

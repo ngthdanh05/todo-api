@@ -13,13 +13,10 @@ export const updateTodo = async (
 ) => {
   try {
     const { title } = req.body;
+    const { id } = req.params;
 
-    const updated = await Todo.findByIdAndUpdate(
-      req.params.id,
-      { title },
-      { new: true }
-    );
-    if (!updated) return next(new AppError("Todo not found!", 404));
+    const updated = await Todo.findByIdAndUpdate(id, { title }, { new: true });
+    if (!updated) return next(new AppError("Todo update false!", 401));
 
     res.status(200).json({ success: true, data: updated });
   } catch (error) {

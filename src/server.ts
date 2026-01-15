@@ -12,7 +12,7 @@ import todoRouter from "./routes/todoRoute";
 dotenv.config();
 
 const app: Application = express();
-const PORT: number = parseInt(process.env.PORT || "5000", 10);
+const PORT: number = parseInt(process.env.PORT || "3000", 10);
 
 //Middlewares
 app.use(express.json());
