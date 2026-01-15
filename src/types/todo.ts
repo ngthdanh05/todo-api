@@ -1,4 +1,4 @@
-export interface ITodos extends Document {
+export interface ITodos {
   title: string;
   completed?: boolean;
 }
