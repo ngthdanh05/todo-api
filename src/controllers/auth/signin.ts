@@ -49,8 +49,8 @@ export const signin = async (
       .cookie("Authorization", `Bearer ${token}`, {
         path: "/",
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
-        sameSite: "lax",
+        secure: true,
+        sameSite: "none",
         expires: new Date(Date.now() + 8 * 60 * 60 * 1000),
       })
       .status(200)
