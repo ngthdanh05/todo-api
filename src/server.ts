@@ -33,10 +33,6 @@ app.use(
   })
 );
 
-app.options("*", cors());
-
-app.options("*", cors());
-
 app.use("/api/auth", authRouter);
 
 app.use("/api/todo", todoRouter);
