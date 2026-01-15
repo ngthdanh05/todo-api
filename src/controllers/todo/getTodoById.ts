@@ -9,10 +9,10 @@ export const getTodoById = async (
   next: NextFunction
 ) => {
   try {
-    const { id } = req.params;
+    const id = String(req.params.id || "");
 
     // Kiểm tra id có hợp lệ hay không
-    if (!mongoose.Types.ObjectId.isValid(id))
+    if (!id || !mongoose.Types.ObjectId.isValid(id))
       return next(new AppError("Invalid to ID", 400));
 
     const todo = await Todo.findById(id);
